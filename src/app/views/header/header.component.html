@@ -2,9 +2,9 @@
   <a href="" *ngIf="!href">Enlace 1</a>
   <a href="" *ngIf="!href">Enlace 1</a>
   <a href="" *ngIf="!href">Enlace 1</a>
-  <a [href]="href[0]">{{ href[0] }}</a>
-  <a [href]="href[1]">{{ href[1] }}</a>
-  <a [href]="href[2]">{{ href[2] }}</a>
+  <a *ngIf="href" [href]="href[0]">{{ href[0] }}</a>
+  <a *ngIf="href" [href]="href[1]">{{ href[1] }}</a>
+  <a *ngIf="href" [href]="href[2]">{{ href[2] }}</a>
   <div class="search-container">
     <form>
       <input type="text" placeholder="Search.." name="search" />
