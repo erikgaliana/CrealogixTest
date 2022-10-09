@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-12">
+    <ul class="list-group" *ngIf="person && planet">
+      <li class="list-group-item"><span>Name: </span>{{ person.name }}</li>
+      <li class="list-group-item"><span>Gender: </span>{{ person.gender }}</li>
+      <li class="list-group-item">
+        <span>Height: </span>{{ person.height | height }}
+      </li>
+      <li class="list-group-item"><span>Mass: </span>{{ person.mass }}</li>
+      <li class="list-group-item">
+        <span>Skin color: </span>{{ person.skin_color }}
+      </li>
+      <li class="list-group-item">
+        <span>Hair color: </span>{{ person.hair_color }}
+      </li>
+      <li class="list-group-item">
+        <span>Eye color: </span>{{ person.eye_color }}
+      </li>
+      <li class="list-group-item"><span>Homeworld: </span>{{ planet.name }}</li>
+      <li class="list-group-item">
+        <span>Starships: </span>
+        <p *ngFor="let ship of person.starships">{{ ship }}<br /></p>
+      </li>
+      <li class="list-group-item">
+        <span>Films: </span>
+        <p *ngFor="let film of person.films">{{ film }}<br /></p>
+      </li>
+      <li class="list-group-item">
+        <span>Vehicles: </span>
+        <p *ngFor="let vehicle of person.vehicles">{{ vehicle }}<br /></p>
+      </li>
+      <li class="list-group-item">
+        <span>Species: </span>{{ person.species }}
+      </li>
+      <li class="list-group-item">
+        <span>Created at: </span>{{ person.created }}
+      </li>
+      <li class="list-group-item">
+        <span>Edited at: </span>{{ person.edited }}
+      </li>
+    </ul>
+    <div class="buttonContainer">
+      <button class="btn btn-primary" routerLink="/people">Back</button>
+    </div>
+  </div>
+</div>

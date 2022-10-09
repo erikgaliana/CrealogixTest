@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-12">
+    <ul class="list-group" *ngIf="planet">
+      <li class="list-group-item"><span>Name: </span>{{ planet.name }}</li>
+      <li class="list-group-item">
+        <span>Diameter: </span>{{ planet.diameter }}
+      </li>
+      <li class="list-group-item">
+        <span>Gravity: </span>{{ planet.gravity }}
+      </li>
+      <li class="list-group-item">
+        <span>Rotation Period: </span>{{ planet.rotation_period }}
+      </li>
+      <li class="list-group-item">
+        <span>Orbital Period: </span>{{ planet.orbital_period }}
+      </li>
+      <li class="list-group-item">
+        <span>Population: </span>{{ planet.population }}
+      </li>
+      <li class="list-group-item">
+        <span>Climate: </span>{{ planet.climate }}
+      </li>
+      <li class="list-group-item">
+        <span>Terrain: </span>{{ planet.terrain }}
+      </li>
+      <li class="list-group-item">
+        <span>Surface Water: </span>{{ planet.surface_water }}
+      </li>
+      <li class="list-group-item">
+        <span>Residents: </span>
+        <p *ngFor="let resident of planet.residents">{{ resident }}<br /></p>
+      </li>
+      <li class="list-group-item">
+        <span>Films: </span>
+        <p *ngFor="let film of planet.films">{{ film }}<br /></p>
+      </li>
+      <li class="list-group-item"><span>Url: </span>{{ planet.url }}</li>
+      <li class="list-group-item">
+        <span>Created at: </span>{{ planet.created }}
+      </li>
+      <li class="list-group-item">
+        <span>Edited at: </span>{{ planet.edited }}
+      </li>
+    </ul>
+    <div class="buttonContainer">
+      <button class="btn btn-primary" routerLink="/planets">Back</button>
+    </div>
+  </div>
+</div>

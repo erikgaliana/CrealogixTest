@@ -1,0 +1,14 @@
+<div class="row buttonContainer">
+  <div class="col-12 row">
+    <div class="col-2" *ngFor="let item of nav">
+      <button
+        class="btn btn-primary"
+        [routerLink]="[item.link]"
+        routerLinkActive="active"
+      >
+        <i [class]="item.icon"></i>
+        {{ item.name }}
+      </button>
+    </div>
+  </div>
+</div>

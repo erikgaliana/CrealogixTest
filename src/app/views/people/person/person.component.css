@@ -1,0 +1,12 @@
+span {
+  font-weight: bold;
+}
+
+button {
+  width: 130px;
+}
+.buttonContainer {
+  padding-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}

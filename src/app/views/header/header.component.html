@@ -1,0 +1,14 @@
+<div class="topnav">
+  <a href="" *ngIf="!href">Enlace 1</a>
+  <a href="" *ngIf="!href">Enlace 1</a>
+  <a href="" *ngIf="!href">Enlace 1</a>
+  <a [href]="href[0]">{{ href[0] }}</a>
+  <a [href]="href[1]">{{ href[1] }}</a>
+  <a [href]="href[2]">{{ href[2] }}</a>
+  <div class="search-container">
+    <form>
+      <input type="text" placeholder="Search.." name="search" />
+      <button><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>

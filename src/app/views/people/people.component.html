@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-12">
+    <ul class="list-group" *ngIf="people && canChild">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">
+              Name
+              <button class="btn" (click)="sort()">
+                <i class="fa fa-arrow-up" aria-hidden="true"></i>
+              </button>
+            </th>
+
+            <th scope="col">Height</th>
+
+            <th scope="col">Mass</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let person of people; let i = index">
+            <td>{{ person.name }}</td>
+            <td>{{ person.height | height }}</td>
+            <td>{{ person.mass }}</td>
+            <td>
+              <button class="btn btn-primary" [routerLink]="['/people', i + 1]">
+                More details
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </ul>
+    <router-outlet></router-outlet>
+  </div>
+</div>
